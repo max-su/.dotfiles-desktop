@@ -447,3 +447,4 @@ bindsym XF86AudioMute exec "pamixer -t"
 exec --no-startup-id $HOME/.fehbg
 exec redshift-gtk
 exec enpass
+exec mullvad-vpn
