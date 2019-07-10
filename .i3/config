@@ -316,15 +316,14 @@ set_from_resource $term_color15    color15
 
 # set primary gruvbox colorscheme colors
 set $bg #282828
-set $white #f0ead6
+# set $white #f0ead6
+set $white #fff6e6
 set $red #cc241d
 set $green #98971a
-#set $yellow #d79921
-set $yellow #FFC0CB
+set $pink #FFC0CB
 set $blue #458588
 set $purple #b16286
-#set $aqua #689d68
-set $aqua #DC143C
+set $airbnbred #ff5a5f
 set $gray #a89984
 set $darkgray #1d2021
 
@@ -345,13 +344,14 @@ bar {
 
     colors {
         background $bg
-        statusline $yellow
+        statusline $pink
         separator  #454947
 
 #                      border  backgr. text
-        focused_workspace    $aqua $aqua $darkgray
-        inactive_workspace   $darkgray $darkgray $yellow
-        active_workspace     $darkgray $darkgray $yellow
+        # focused_workspace    $airbnbred $airbnbred $white
+        focused_workspace    $airbnbred $airbnbred $white
+        inactive_workspace   $darkgray $darkgray $pink
+        active_workspace     $darkgray $darkgray $pink
 #       binding_mode       #j6a085 #2C2C2C #F9FAF9
         urgent_workspace $red $red $bg
     }
@@ -363,8 +363,8 @@ bindsym $mod+m bar mode toggle
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
 client.focused          $blue $blue $darkgray $purple $darkgray
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.focused_inactive $darkgray $darkgray $pink $purple $darkgray
+client.unfocused        $darkgray $darkgray $pink $purple $darkgray
 client.urgent $red $red $white $red $red
   #client.focused          #556064 #556064 #80FFF9 #FDF6E3
   #client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
@@ -439,6 +439,9 @@ bindsym $mod+l focus right
 
 # resize window (you can also use the mouse for that)
 
+bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 bindsym XF86AudioRaiseVolume exec "pamixer -i 5"
 bindsym XF86AudioLowerVolume exec "pamixer -d 5"
 bindsym XF86AudioMute exec "pamixer -t"
