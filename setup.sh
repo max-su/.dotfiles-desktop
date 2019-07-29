@@ -15,6 +15,7 @@ ln -s -f $HOME/.dotfiles/.config/redshift/redshift.conf $HOME/.config/redshift/r
 
 mkdir -p $HOME/Pictures/Backgrounds/
 ln -s -f $HOME/.dotfiles/Pictures/Backgrounds/ff7_0.png $HOME/Pictures/Backgrounds/ff7_0.png
+ln -s -f $HOME/.dotfiles/Pictures/Backgrounds/ffx_vertical.png $HOME/Pictures/Backgrounds/ffx_vertical.png
 
 mkdir -p $HOME/.local/share/fonts/
 cp $HOME/.dotfiles/.local/share/fonts/* $HOME/.local/share/fonts/
@@ -22,4 +23,5 @@ cp $HOME/.dotfiles/.local/share/fonts/* $HOME/.local/share/fonts/
 mkdir -p $HOME/.local/.config/volumeicon/
 ln -s -f $HOME/.dotfiles/.config/volumeicon/volumeicon $HOME/.config/volumeicon/volumeicon
 
+mkdir -p $HOME/Pictures/Screenshots
 sudo ln -s -f $HOME/.dotfiles/pulse-daemon.conf /etc/pulse/daemon.conf

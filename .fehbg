@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-scale '/home/max/Pictures/Backgrounds/ff7_0.png' 
+feh --no-fehbg --bg-scale '/home/max/Pictures/Backgrounds/ff7_0.png' '/home/max/Pictures/Backgrounds/ffx_vertical.png'
